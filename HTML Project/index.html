@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/Icon.ico"/>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+        <img id="logo" src="Images/Sunnypaws logo-01.jpg" alt="Sunny-Paw-Logo">
+        <h1 >Welcome to Sunny Paws Refuge!</h1>         
+        </div>
+        <hr>
+        <div class="Intro-image-container">
+            <img id="Intro-image-still" src="Images/Cat and dog icon still.jpg" alt="Adopt a Pet Logo Still">
+            <img id="Intro-image-animated" src="Images/Cat-and-dog-icon-animated.gif" alt="Adopt a Pet Logo Animated"> 
+            <!-- By default, the image that comes later in the container goes on top, in this case, the animated one -->
+        </div>
+
+        <div class="nav-bar">
+        <nav>
+            <ul>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#requirements">Requirements</a></li>
+                <li><a href="#friends">Friends looking for a home!</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
+        </div>
+
+    </header>
+    
+    <main>
+        <section class="about-us" id="about-us">
+        <h2>About us</h2>
+        <p>Founded in 2012, Sunny Paws Refuge has been a beacon of hope for homeless animals across the state of Oregon. What started as a small volunteer project quickly grew into a fully operational shelter thanks to the passion and dedication of animal lovers in our community. Over a decade later, our mission remains the same: to provide a second chance to every paw that crosses our path.</p>
+            <br>
+        <p>Located just outside of Eugene, Oregon, Sunny Paws sits on a beautiful 10-acre property surrounded by trees, open fields, and fresh country air. Our location allows rescued animals to heal, play, and rediscover trust in a peaceful, natural environment. The refuge is easily accessible to visitors while giving the animals the safe, quiet space they need to thrive</p>
+            <br>
+        <p>Sunny Paws Refuge is proudly funded through private donations, local business sponsorships, and the tireless efforts of our volunteers. We also host seasonal fundraisers, adoption events, and educational programs to maintain and expand our services. Every dollar raised goes directly toward animal care, shelter improvements, veterinary services, and enrichment activities for our furry friends.</p>
+            <br>
+        <p>Today, Sunny Paws is home to over 150 rescued animals, including dogs, cats, rabbits, and even the occasional goat or guinea pig! Every animal in our care receives personalized attention, medical support, and lots of love from our dedicated team. We work tirelessly to ensure that every pet is ready for their forever home — healthy, happy, and full of hope.</p>
+            <br>
+        <p>Our state-of-the-art facilities include spacious indoor-outdoor kennels, cozy cat cottages, veterinary suites, and fully fenced play yards designed for exercise and socialization. We believe that a comfortable, stimulating environment makes a world of difference in an animal's recovery and happiness. At Sunny Paws Refuge, every wag, purr, and nuzzle reminds us why we do what we do: because every life matters.</p>
+        </section>
+        <br>
+        <br>
+        <br>
+
+        <section class="requirements" id="requirements">
+           
+        <h2>Requirements</h2>
+        
+            <p>If you're interested in adopting, please fill the form below with full honesty. One of our team members will reach out to you as soon as possible.</p>
+            <br>
+            <form action="submit-form.js" method="get">
+                <fieldset class="personal-info">
+                    <legend>Personal information</legend>
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" name="last-name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone-number">Phone number</label>
+                <input type="tel" id="phone-number" name="phone-number" required>
+                </fieldset>
+
+                <fieldset class="adoption-info">
+                    <legend>Adoption information</legend>
+                    <p>What kind of company are you looking for?</p>
+                
+                    <div class="adoption-info-container">
+                        <label for="dog">
+                          <input type="radio" id="dog" name="pet-type" value="dog" required>
+                          Dog
+                        </label>
+                
+                        <label for="cat">
+                          <input type="radio" id="cat" name="pet-type" value="cat" required>
+                          Cat
+                        </label>
+                
+                        <label for="both">
+                          <input type="radio" id="both" name="pet-type" value="both" required checked>
+                          Both
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="adoption-info">
+                    <legend>Household information</legend>
+                    <p>Do you have any other pets?</p>
+                
+                    <div class="adoption-info-container">
+                        <label for="yes">
+                          <input type="radio" id="yes" name="other-pets" value="yes" required>
+                          Yes
+                        </label>
+                
+                        <label for="no">
+                          <input type="radio" id="no" name="other-pets" value="no" required checked>
+                          No
+                        </label>
+
+                        <label for="unsure">
+                            <input type="radio" id="unsure" name="other-pets" value="unsure" required>
+                            Unsure
+                        </label>
+                    </div>
+                </fieldset>
+
+                <br>
+
+                <fieldset class="comments">
+                    <legend>Tell us more!</legend>
+                    <label for="comments">In a brief text, please tell us why you want an animal friend in your life:</label>
+                    <textarea id="comments" name="comments" required></textarea>
+                </fieldset>
+                <button type="submit" id="submit-form">Submit form!</button>
+            </form>
+        </section>
+
+        <section class="friends" id="friends">
+            <h2>Friends looking for a home!</h2>
+            <p id="friends-intro-text">Looking to add a little extra love to your life? Come explore our current catalogue of adorable four-legged friends who are eagerly searching for their forever homes! Every pet is fully vaccinated, neutered, and ready to become a beloved member of your family. Don't wait any longer! Your perfect companion could be waiting for you right now! Visit us today and make a lifelong connection.</p>
+
+            <h3>Our Feline folks</h3>
+
+            <div class="images-catalogue">
+                <button class="scroll-button left" onclick="scrollGallery('galleryCats', -300)">←</button>
+              
+                <div class="gallery-wrapper" id="galleryCats">
+                  <a href="CatsProfiles/Sandy.html" title="Hello, I'm Sandy"><img src="Images/Pets images/Cat 1.jpg" alt="Cat 1"></a>
+                  <a href="CatsProfiles/Dino.html" title="Hi, This is Dino"><img src="Images/Pets images/Cat 2.jpg" alt="Cat 2"></a>
+                  <a href="CatsProfiles/Chester.html" title="Name's Chester"><img src="Images/Pets images/Cat 3.jpg" alt="Cat 3"></a>
+                  <a href="CatsProfiles/JonHopkins.html" title="I am Jon Hopkins"><img src="Images/Pets images/Cat 4.jpg" alt="Cat 4"></a>
+                  <a href="CatsProfiles/Olaf.html" title="They call me Olaf"><img src="Images/Pets images/Cat 5.jpg" alt="Cat 5"></a>
+                </div>
+              
+                <button class="scroll-button right" onclick="scrollGallery('galleryCats', 300)">→</button>
+              </div>
+              
+              <h3>Our Canine buddies</h3>
+              
+              <div class="images-catalogue">
+                <button class="scroll-button left" onclick="scrollGallery('galleryDogs', -300)">←</button>
+              
+                <div class="gallery-wrapper" id="galleryDogs">
+                  <a href="DogsProfiles/Ben.html" title="Hi, I am Ben!"><img src="Images/Pets images/Dog 1.jpg" alt="Dog 1"></a>
+                  <a href="DogsProfiles/Shawn.html" title="My name is Shawn"><img src="Images/Pets images/Dog 2.jpg" alt="Dog 2"></a>
+                  <a href="DogsProfiles/Sammy.html" title="I'm Sammy"><img src="Images/Pets images/Dog 3.jpg" alt="Dog 3"></a>  
+                  <a href="DogsProfiles/Max.html" title="This is Max, nice to meet you!"><img src="Images/Pets images/Dog 4.jpg" alt="Dog 4"></a>
+                  <a href="DogsProfiles/Hans.html" title="The name is Hans!"><img src="Images/Pets images/Dog 5.jpg" alt="Dog 5"></a>
+                </div>
+              
+                <button class="scroll-button right" onclick="scrollGallery('galleryDogs', 300)">→</button>
+              </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 id="contac-title-h2">Contact Us!</h2>
+            <h3 id="contac-title-h3">If you have any questions or just wish to have more information about our work, please reach us out to:</h3>
+            <div class="contact-info">            
+            <address>                
+                <br>
+                <p>Email: <a href="mailto:contact@SunnyPawsRefuge">Contact@SunnyPawsRefuge</a></p>
+                <br>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <br>
+                <p>123 Main Street, City, Country</p>
+            </address>
+        </div>
+        </section>
+
+
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
